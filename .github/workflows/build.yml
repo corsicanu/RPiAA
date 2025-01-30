@@ -2,20 +2,14 @@ name: Makefile CI
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   build:
     strategy:
       matrix:
         defconfig:
-        - raspberrypi0w
         - raspberrypizero2w
         - raspberrypi4
-        - raspberrypi3a
 
     runs-on: ubuntu-latest
 
